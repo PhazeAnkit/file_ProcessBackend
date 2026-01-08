@@ -11,5 +11,6 @@ const upload = multer({
 
 const router = Router();
 router.post("/upload", upload.single("file"), fileController.uploadFiles);
+router.post("/process-file", fileController.processFile);
 
 export default router;
