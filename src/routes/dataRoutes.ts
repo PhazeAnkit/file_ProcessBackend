@@ -1,5 +1,10 @@
 import { Router } from "express";
+import dataController from "../controllers/dataController";
 
-const router=Router()
+const router = Router();
 
-router.get('/getAll')
+router.get("/", dataController.getData);
+
+
+
+export default router;
