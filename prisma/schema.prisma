@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+model User{
+  id String @unique
+  name String
+  age Int?
+  education String
+
+  @@index([education])
+  @@unique([id,name])
+}
